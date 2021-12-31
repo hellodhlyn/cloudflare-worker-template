@@ -1,12 +1,13 @@
 name = "cloudflare-worker-template"
+type = "javascript"
+
 account_id = ""
-type = "webpack"
 workers_dev = true
+route = ""
+zone_id = ""
 
 [build]
 command = "yarn build"
 
 [build.upload]
-format = "modules"
-dir = "dist"
-main = "./index.mjs"
+format = "service-worker"
